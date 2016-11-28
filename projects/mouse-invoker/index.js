@@ -1,11 +1,24 @@
-import {app, BrowserWindow, screen} from 'electron';
+import {app, BrowserWindow, screen, globalShortcut} from 'electron';
 
 app.on('ready', () => {
-  console.log('started');
+  const panelWin = new BrowserWindow({
+    width: 200,
+    height: 50,
+    x: 0,
+    y: 0,
+    show: false
+  });
   const win = new BrowserWindow({
     width: 300,
     height: 300,
     show: false
+  });
+
+  globalShortcut.register('Control+a', () => {
+    panelWin.show();
+  });
+  globalShortcut.register('Control+s', () => {
+    panelWin.hide();
   });
 
   setInterval(() => {
