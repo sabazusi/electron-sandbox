@@ -4,7 +4,7 @@ app.on('ready', () => {
   const win = new BrowserWindow({
     width: 300,
     height: 300,
-    show: false
+    show: true
   });
-  win.loadURL('./index.html');
+  win.loadURL('../src/index.html');
 });
