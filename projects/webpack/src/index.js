@@ -1,4 +1,5 @@
 import {app, BrowserWindow} from 'electron';
+import path from 'path';
 
 app.on('ready', () => {
   const win = new BrowserWindow({
@@ -6,5 +7,6 @@ app.on('ready', () => {
     height: 300,
     show: true
   });
-  win.loadURL('../src/index.html');
+  const templatePath = 'file:' + path.resolve(__dirname, '../src', 'index.html');
+  win.loadURL(templatePath);
 });
