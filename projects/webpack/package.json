@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron .",
     "babel": "babel ./src -d dist",
+    "webpack": "webpack --config webpack.config.main.js && webpack --config webpack.config.renderer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
