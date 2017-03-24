@@ -7,13 +7,15 @@ app.on('ready', () => {
     height: 200,
     x: 0,
     y: 0,
-    show: true,
+    show: false,
     resizable: false,
     movable: true,
     alwaysOnTop: true,
-    frame: false,
-    backgroundColor: '#f00'
+    frame: false
   });
 
   win.loadURL(`file://${path.resolve(__dirname, '../')}/window.html`);
+  setTimeout(() => {
+    win.show();
+  }, 500);
 });
