@@ -1,7 +1,9 @@
 body {
+  margin: 1px;
   background-color: #0f0;
   -webkit-user-select: none;
   -webkit-app-region: drag;
+  box-shadow:5px 5px 10px #333;
 }
 
 span {
